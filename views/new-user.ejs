@@ -7,18 +7,19 @@
   <title>New Profile</title>
   <link rel="stylesheet" href="/styles/base.css">
   <link rel="stylesheet" href="/styles/profiles.css">
+  <script src="/scripts/file-preview.js" defer></script>
 </head>
 <body>
   <main id="new-user">
-    <form action="/profiles" method="POST">
+    <form action="/profiles" method="POST" enctype="multipart/form-data">
       <div class="form-control">
         <label for="username">사용자이름</label>
         <input type="text" id="username" name="username" required>
         <input type="file" id="image" name="image" required accept="image/jpg,image/png"><!--선택할 수 있는 파일을 제공-->
       </div>
       <div class="form-control">
+        <img id="image-preview" src="" alt="당신이 선택한 이미지">
         <label for="image">사용자 이미지</label>
-        ???
       </div>
       <button class="btn">사용자 저장</button>
     </form>
